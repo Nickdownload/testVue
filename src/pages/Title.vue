@@ -1,12 +1,13 @@
 <template>
   <div class="hello">
-      我是主页
+      Title
+      <!-- <input :value="value" @input="$emit('input',$event.target.value)" /> -->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Title',
 }
 </script>
 

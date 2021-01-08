@@ -1,18 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-link to="/"> 主页</router-link>
+     <router-link to="/home?eat=bancer"> Home</router-link>
+     <router-link to="/food"> Food</router-link>
+     <router-link to="/son/cc"> son</router-link>
+     <router-link to="/news"> news</router-link>
+     <div>
+       <button @click="go"> 跳转到Home</button>
+     </div>
+     <router-view />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  methods:{
+    go(){
+      this.$router.push({
+        name:'son',
+        params:{
+          name:'qq'
+        }
+      })
+    }
+  },
+  //  watch:{
+  //   "$route" (to) {
+  //    console.log(to)
+  //    }
+  //   }
 }
 </script>
 

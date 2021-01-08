@@ -1,12 +1,12 @@
 <template>
   <div class="hello">
-      我是主页
+      Login
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Login',
 }
 </script>
 
