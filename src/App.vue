@@ -5,6 +5,10 @@
      <router-link to="/food"> Food</router-link>
      <router-link to="/son/cc"> son</router-link>
      <router-link to="/news"> news</router-link>
+     <router-link to="/move"> Move</router-link>
+     <div>
+      <router-link to="/menu"> 递归组件</router-link>
+     </div>
      <div>
        <button @click="go"> 跳转到Home</button>
      </div>
@@ -26,6 +30,9 @@ export default {
       })
     }
   },
+  mounted(){
+    console.log(process.env)
+  }
   //  watch:{
   //   "$route" (to) {
   //    console.log(to)

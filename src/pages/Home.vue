@@ -6,11 +6,14 @@
       {{friend}}
       <button @click="btnClick">点击 </button>
        <button @click="btn">Friend </button>
+
+       <button @click="req">发送请求</button>
   </div>
 </template>
 
 <script>
 import { mapState,mapMutations } from 'vuex'
+import request from '../utils/request'
 export default {
   name: 'home',
   computed:{
@@ -31,6 +34,13 @@ export default {
     },
     btn(){
       this.changeFriend('Nic')
+    },
+    req(){
+      request({
+        url:'/users'
+      }).then(res=>{
+        console.log(res)
+      })
     }
   },
   mounted(){

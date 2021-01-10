@@ -1,20 +1,17 @@
 <template>
   <div class="hello">
-   <slot-view >
-      <template #head="item">
-        {{item}}
-      </template>
-   </slot-view>
+     <slot name="head" :value="list"></slot>
   </div>
 </template>
 
 <script>
-import SlotView from './Slot-view'
 export default {
+  data(){
+    return {
+      list:'cccc'
+    }
+  },
   name: 'HelloWorld',
-  components:{
-    SlotView
-  }
 }
 </script>
 

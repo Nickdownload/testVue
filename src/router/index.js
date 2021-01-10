@@ -23,12 +23,20 @@ const router =new VueRouter({
           component:Home,
         },
         {
+          path:'/menu',
+          component:()=>import(/*webpackChunkName:'menu'*/ '../pages/Menu'),
+        },
+        {
             path:'/login',
             component:Login,
           },
           {
             path:'/news',
             component:()=>import(/*webpackChunkName:'news'*/ '../pages/New'),
+          },
+          {
+            path:'/move',
+            component:()=>import(/*webpackChunkName:'move'*/ '../pages/Move'),
           },
         {
             path:"/son/:name",
